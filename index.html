@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body ng-app="hackUApp" ng-controller="socialRaffle">
+
+<script src="raffle.js">
+</script>
+<script src="raffleService.js">
+</script>
+<h1>Countdown Clock</h1>
+<div id="clockdiv">
+  <div style="display: none;">
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+
+
+
+<div >
+  <ul>
+    <div>{{msg.entities.user_mentions[0].screen_name}}</div>
+    {{msg.retweeted_status.user.profile_image_url}}
+     <img ng-src="msg.retweeted_status.user.profile_image_url"></img>
+
+  </ul>
+</div>
+
+
+</body>
+</html>
